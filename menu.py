@@ -102,8 +102,13 @@ class MainScreen(Screen):
         )
         
         self.buttons = []
-        button_texts = ['HELLO', 'HAPPY MODE', 'GIT CLONE']
-        button_callbacks = [self.show_hello_popup, self.run_happy_mode, self.show_git_popup]
+        button_texts = ['HELLO', 'HAPPY MODE', 'GIT CLONE', 'OBSIDIAN']
+        button_callbacks = [
+            self.show_hello_popup, 
+            self.run_happy_mode, 
+            self.show_git_popup,
+            self.run_obsidian  # Added the callback for OBSIDIAN button
+        ]
         
         for text, callback in zip(button_texts, button_callbacks):
             btn = HoverButton(text=text, size_hint=(1, None), height=dp(60))
@@ -216,6 +221,11 @@ class MainScreen(Screen):
     def run_happy_mode(self, instance):
         subprocess.Popen(['python3', './python_scripts/happy_jarvis.py'])
         self.update_status('Happy mode activated')
+
+    def run_obsidian(self, instance):
+        # Simply run the jarvis.sh script with obsidian parameter, just like the BYE button
+        subprocess.run(['./jarvis.sh', 'obsidian'])
+        self.update_status('Obsidian opened')
 
     def show_git_popup(self, instance):
         content = BoxLayout(orientation='vertical', spacing=dp(20), padding=dp(20))
