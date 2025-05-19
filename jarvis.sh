@@ -1,22 +1,27 @@
 #!/bin/bash
 
-GITHUB_EMAIL=""
-GITHUB_USERNAME=""
-GITHUB_REPO=""
+# GitHub email:
+GITHUB_EMAIL="182381184+ArtDaSak@users.noreply.github.com"
+
+# Github username:
+GITHUB_USERNAME="ArtDaSak"
+
+# Repository's SSH link:
+GITHUB_REPO="https://github.com/ArtDaSak/[Repository].git"
 
   # --- Personalización de la terminal ---
 
 # Color de fondo de la terminal en formato RGB o hexadecimal(#):
-BACKGROUND_COLOR="#000000"
+BACKGROUND_COLOR="#0D114F"
 
 # Nivel de transparencia del fondo de la terminal (0-100):
-BACKGROUND_TRANSPARENCY_PERCENT=17
+BACKGROUND_TRANSPARENCY_PERCENT=27
 
 # Tipo y tamaño de fuente para la terminal:
 FONT="Liberation Mono 12"
 
 # Color del texto en la terminal en formato RGB o hexadecimal(#):
-FOREGROUND_COLOR="rgb(255,255,255)"
+FOREGROUND_COLOR="#AD8CD7"
 
 
 
